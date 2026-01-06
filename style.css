@@ -20,6 +20,9 @@ html {
     --primary-bg-color: #141414;
     --primary-text-color: #f4f4f4;
     --bg-btn-color: #1e1e1e;
+    --bg-board-color: #171717;
+    --bg-task-color: #131313;
+    --button-color: #ca0000;
 
     /* Padding Variables */
     --nav-padding: 15px 30px;
@@ -45,6 +48,12 @@ body {
     color: var(--primary-text-color);
 }
 
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 nav {
     padding: var(--nav-padding);
     display: flex;
@@ -65,9 +74,43 @@ nav button {
 section {
     padding: var(--section-padding);
     display: flex;
+    flex-grow: 1;
     justify-content: space-between;
+    gap: var(--padding-xxl);
 }
 
 section .task-column {
-    background: red;
+    background: var(--bg-board-color);
+    flex-grow: 1;
+    padding: var(--padding-xxl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-xl);
+}
+
+section .task-column .heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .task-column .task {
+    background: var(--bg-task-color);
+    padding: var(--padding-l);
+    border-radius: var(--border-radius-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-m);
+}
+
+section .task-column .task button {
+    align-self: flex-end;
+    cursor: pointer;
+    padding: var(--padding-m) var(--padding-l);
+    border-radius: var(--border-radius-s);
+    border: none;
+    outline: none;
+    color: var(--primary-text-color);
+    background: var(--button-color);
 }
