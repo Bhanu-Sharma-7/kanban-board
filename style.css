@@ -61,6 +61,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: var(--primary-bg-color);
 }
 
 nav button {
@@ -84,6 +87,7 @@ section {
 section .task-column {
     background: var(--bg-board-color);
     flex-grow: 1;
+    width: 100%;
     padding: var(--padding-xxl);
     display: flex;
     flex-direction: column;
