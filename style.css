@@ -23,6 +23,7 @@ html {
     --bg-board-color: #171717;
     --bg-task-color: #131313;
     --button-color: #ca0000;
+    --border-color: #fff;
 
     /* Padding Variables */
     --nav-padding: 15px 30px;
@@ -86,6 +87,13 @@ section .task-column {
     display: flex;
     flex-direction: column;
     gap: var(--padding-xl);
+    border-radius: var(--border-radius-m);
+    transition:  all 0.7 cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+section .task-column.hover-over {
+    border: 2px dashed var(--border-color);
+    scale: 1;
 }
 
 section .task-column .heading {
@@ -102,6 +110,7 @@ section .task-column .task {
     display: flex;
     flex-direction: column;
     gap: var(--padding-m);
+    cursor: grab;
 }
 
 section .task-column .task button {
