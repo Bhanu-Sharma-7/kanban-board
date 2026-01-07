@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanban Web Application | HTML | CSS | JS</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <nav>
@@ -13,7 +15,7 @@
                 Kanban
             </div>
             <div class="right">
-                <button>Add new Task</button>
+                <button id="toggle-modal">Add new Task</button>
             </div>
         </nav>
         <section class="board">
@@ -21,11 +23,6 @@
                 <div class="heading">
                     <div class="left">To Do</div>
                     <div class="right">Count</div>
-                </div>
-                <div draggable="true" class="task">
-                    <h2>Task 1</h2>
-                    <p>Description for Task 1</p>
-                    <button>Delete</button>
                 </div>
             </div>
             <div id="progress" class="task-column">
@@ -42,6 +39,16 @@
             </div>
         </section>
     </main>
+
+    <div class="modal add-new-task">
+        <div class="bg"></div>
+        <div class="new-task-container">
+            <input type="text" id="task-title-input" placeholder="Task Title">
+            <textarea id="task-desc-input" placeholder="Task Description"></textarea>
+            <button id="add-new-task" class="add-task-btn">Add Task</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
